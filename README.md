@@ -24,18 +24,18 @@ This is a boilerplate for react native project.
 
 ## Setup the project
 
-- Clone this project
+Clone this project
 
 ```
 git clone < project-url.git >
 
 ```
-- Go to the project folder
+Go to the project folder
 
 ```
 cd  'PROJECT_FOLDER'
 ```
-- Install the packages with this command
+Install the packages with this command
 
 ```
 npm install
@@ -43,10 +43,11 @@ npm install
 
 ## Running the project
 
-- To run in Android simulator
+To run in Android simulator
 
 ```
 cd 'PROJECT_FOLDER'
+
 react-native run-android
 ```
 
@@ -54,5 +55,6 @@ react-native run-android
 
 ```
 cd 'PROJECT_FOLDER'
+
 react-native run-ios
 ```
