@@ -1,34 +1,27 @@
 # React Native seed project
 
-This is a boilerplate for react native project.
-
-
-## Main technologies used
-
-- [React Native](https://github.com/facebook/react-native)
-
-> A framework for building native apps with React.
-
-- [Redux](http://redux.js.org/)
-
-> Redux is a predictable state container for JavaScript apps.
-
-- [Native Base](https://nativebase.io/)
-
-> Essential cross-platform UI components for React Native
-
-- [React Navigation](https://reactnavigation.org/)
-
-> Routing and navigation for your React Native apps
 
 
 ## Prequisites (Development & Deployment):
 
 | Tools | Version |
 | --- | --- |
-| xcode | 9.2 |
+| Xcode | 9.2 |
 | Android Studio  | 3.0.1 |
 | Java | JDK 8 |
+| Node  | v8.10.0 |
+| Npm  | 5.6.0 |
+
+
+## Main technologies used
+
+| Modules | Version |
+| --- | --- |
+| React | 16.3.1 |
+| React Native | 0.55.4 |
+| React navigation  | ^2.0.1 |
+| Redux | ^4.0.0 |
+| Native Base | ^2.4.3 |
 
 
 ## Setup the project
