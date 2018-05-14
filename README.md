@@ -5,7 +5,13 @@ This is a boilerplate for react native project.
 ## Getting Started
 
 ```
-cd 'PROJECT FOLDER'
+cd 'PROJECT FOLDER'  
+
+npm install
+
+To run in android -- >  react-native run-android
+
+To run in ios -- >  react-native run-ios
 ```
 
 ### Prerequisites
