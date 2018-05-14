@@ -13,7 +13,6 @@ import {
 export const signIn = (user, callback) => async dispatch => {
   try {
   //  let { data } = await axios.get(ROOT_URL);
-  console.log('user is  '+JSON.stringify(user))
   //  await AsyncStorage.setItem('user_data',JSON.stringifyuser);
     dispatch({ type: SAVE_USER, payload: user });
     callback();

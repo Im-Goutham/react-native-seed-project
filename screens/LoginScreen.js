@@ -16,9 +16,7 @@ class LoginScreen extends Component {
 
       try {
         // let { data } = await axios.post(`${ROOT_URL}/verifyOTP`, { username: this.state.username, code: this.state.username })
-          alert('came here1')
           let data = {username:this.state.username,password:this.state.password};
-          alert('data is '+JSON.stringify(data));
           this.props.signIn(data, () => {
               this.props.navigation.navigate('main');
           }).catch(error => {
