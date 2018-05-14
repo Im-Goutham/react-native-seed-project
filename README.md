@@ -9,7 +9,7 @@
 | Xcode | 9.2 |
 | Android Studio  | 3.0.1 |
 | Java | JDK 8 |
-| Node  | v8.10.0 |
+| Node  | 8.10.0 |
 | Npm  | 5.6.0 |
 
 
