@@ -22,6 +22,15 @@ This is a boilerplate for react native project.
 > Routing and navigation for your React Native apps
 
 
+## Prequisites (Development & Deployment):
+
+| Tools | Version |
+| --- | --- |
+| xcode | 9.2 |
+| Android Studio  | 3.0.1 |
+| Java | JDK 8 |
+
+
 ## Setup the project
 
 Clone this project
@@ -56,14 +65,4 @@ To run in ios simulator
 cd 'PROJECT_FOLDER'
 
 react-native run-ios
-```
-
-## Versions this project is supported
-
-```
-xcode --> 9.2
-
-Android Studio --> 3.0.1
-
-Java --> JDK 8
 ```
