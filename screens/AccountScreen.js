@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import { View, Text, StyleSheet } from 'react-native';
+import { connect } from 'react-redux';
 import { Button, Icon } from  'native-base';
+import * as actions from '../actions';
+
 
 import Header from '../components/Header';
 
@@ -12,7 +15,7 @@ class AccountScreen extends Component {
            <View style={{flex:1}}>
            <Header navigation={this.props.navigation} title={'Account'}/>
             <View style={styles.container}>
-               <Text>AccountScreen</Text>
+               <Text>{this.props.user ? this.props.user.username : '' }</Text>
                <Text>AccountScreen</Text>
                <Text>AccountScreen</Text>
                <Text>AccountScreen</Text>
@@ -34,4 +37,7 @@ const styles = StyleSheet.create({
     }
 })
 
-export default AccountScreen;
+
+export default connect(state => {
+  return { user: state.user.user };
+}, actions)(AccountScreen);
