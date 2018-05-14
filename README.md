@@ -28,19 +28,16 @@ Clone this project
 
 ```
 git clone < project-url.git >
-
 ```
 Go to the project folder
 
 ```
 cd  'PROJECT_FOLDER'
-
 ```
 Install the packages with this command
 
 ```
 npm install
-
 ```
 
 ## Running the project
@@ -51,7 +48,6 @@ To run in Android simulator
 cd 'PROJECT_FOLDER'
 
 react-native run-android
-
 ```
 
 To run in ios simulator
@@ -60,7 +56,6 @@ To run in ios simulator
 cd 'PROJECT_FOLDER'
 
 react-native run-ios
-
 ```
 
 ## Versions this project is supported
@@ -71,5 +66,4 @@ xcode --> 9.2
 Android Studio --> 3.0.1
 
 Java --> JDK 8
-
 ```
