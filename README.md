@@ -51,7 +51,7 @@ cd 'PROJECT_FOLDER'
 react-native run-android
 ```
 
-- To run in ios simulator
+To run in ios simulator
 
 ```
 cd 'PROJECT_FOLDER'
