@@ -20,3 +20,39 @@ This is a boilerplate for react native project.
 - [React Navigation](https://reactnavigation.org/)
 
 > Routing and navigation for your React Native apps
+
+
+## Setup the project
+
+- Clone this project
+
+```
+git clone < project-url.git >
+
+```
+- Go to the project folder
+
+```
+cd  'PROJECT_FOLDER'
+```
+- Install the packages with this command
+
+```
+npm install
+```
+
+## Running the project
+
+- To run in Android simulator
+
+```
+cd 'PROJECT_FOLDER'
+react-native run-android
+```
+
+- To run in ios simulator
+
+```
+cd 'PROJECT_FOLDER'
+react-native run-ios
+```
