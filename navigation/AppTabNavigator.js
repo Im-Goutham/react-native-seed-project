@@ -59,8 +59,8 @@ export default TabNavigator({
       tabBarOptions: {
       activeTintColor: 'black',
       inactiveTintColor: '#ffffff',
-      inactiveBackgroundColor: '#353539',
-      activeBackgroundColor: '#353539',
+      inactiveBackgroundColor: '#ffffff',
+      activeBackgroundColor: '#f2f2f3',
       indicatorStyle: {
         borderBottomColor: 'black',
         borderBottomWidth: 2,
