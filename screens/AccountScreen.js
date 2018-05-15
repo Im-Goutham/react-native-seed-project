@@ -11,7 +11,6 @@ import Header from '../components/Header';
 class AccountScreen extends Component {
 
     render() {
-      console.log('config is '+JSON.stringify(API_URL))
        return (
            <View style={{flex:1}}>
            <Header navigation={this.props.navigation} title={'Account'}/>
