@@ -13,6 +13,7 @@ export const signIn = (user, callback) => async dispatch => {
   try {
   //  let { data } = await axios.get(API_URL);
   //  await AsyncStorage.setItem('user_data',JSON.stringify(user));
+   console.log('API_URL is '+API_URL);
     dispatch({ type: SAVE_USER, payload: user });
     callback();
   } catch (error) {
