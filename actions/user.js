@@ -11,7 +11,8 @@ import {
 
 export const signIn = (user, callback) => async dispatch => {
   try {
-  //  let { data } = await axios.get(API_URL);
+
+  //  let { data } = await axios.get(API_URL); <- api url from env
   //  await AsyncStorage.setItem('user_data',JSON.stringify(user));
    console.log('API_URL is '+API_URL);
     dispatch({ type: SAVE_USER, payload: user });
