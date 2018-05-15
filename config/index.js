@@ -1,5 +1,6 @@
 import config from 'react-native-config';
 
+let {API_URL} = config;
 module.exports = {
-  API_URL:  config.API_URL
+  API_URL,
 };

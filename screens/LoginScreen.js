@@ -1,21 +1,48 @@
 import React, { Component } from 'react';
 import { View, Text, StyleSheet, ActivityIndicator } from 'react-native';
 import { connect } from 'react-redux';
-import { Container, Header, Content, Item, Input, Icon, Button } from 'native-base';
+import { Container, Header, Content, Item, Input, Icon, Button, Toast } from 'native-base';
 import axios from 'axios';
 import * as actions from '../actions';
 
-// const ROOT_URL = 'https://us-central1-one-time-project-7f632.cloudfunctions.net';
+
 
 class LoginScreen extends Component {
-  state = { username: '', password: '', error: null, loading: false };
+
+  constructor(props) {
+     super(props);
+     this.state = { username: '', password: '', error: null, loading: false };
+     this.focusNextField = this.focusNextField.bind(this);
+     this.inputs = {};
+   }
+
+     focusNextField(id) {
+         this.inputs[id]._root.focus();
+     }
+
 
 
       handleSubmit = async () => {
+      let {username,password} = this.state;
+      if(!username){
+        Toast.show({
+                  text: "Username is required!",
+                  buttonText: "Okay",
+                  type: "danger"
+            })
+          return false;
+      }
+      if(!password){
+        Toast.show({
+                  text: "Password is required!",
+                  buttonText: "Okay",
+                  type: "danger"
+            })
+          return false;
+      }
       this.setState({ error: null, loading: true });
 
       try {
-        // let { data } = await axios.post(`${ROOT_URL}/verifyOTP`, { username: this.state.username, code: this.state.username })
           let data = {username:this.state.username,password:this.state.password};
           this.props.signIn(data, () => {
               this.props.navigation.navigate('main');
@@ -30,19 +57,41 @@ class LoginScreen extends Component {
     }
 
 
-    componentWillReceiveProps(newProps){
-        console.log('newProps are '+JSON.stringify(newProps));
-    }
-
     render() {
        return (
          <View style={styles.container}>
                <Item>
-                 <Input style={{color:'black'}} placeholder='User Name' value={this.state.username} onChangeText={username => this.setState({ username })}/>
+                 <Input
+                     placeholder='User Name'
+                     value={this.state.username}
+                     autoCapitalize='none'
+                     autoFocus={true}
+                     onSubmitEditing={() => {
+                       this.focusNextField('password');
+                     }}
+                     returnKeyType={ "next" }
+                     ref={ input => {
+                       this.inputs['username'] = input;
+                     }}
+                     onChangeText={username => this.setState({ username })}
+                      />
                  <Icon active name='ios-contact' />
                </Item>
                <Item>
-                 <Input placeholder='Password' value={this.state.password} onChangeText={password => this.setState({ password })}/>
+                 <Input
+                     placeholder='Password'
+                     value={this.state.password}
+                     autoCapitalize='none'
+                     secureTextEntry={true}
+                     onSubmitEditing={() => {
+                         this.handleSubmit()
+                      }}
+                      returnKeyType={ "done" }
+                      ref={ input => {
+                        this.inputs['password'] = input;
+                      }}
+                      onChangeText={password => this.setState({ password })}
+                      />
                  <Icon active name='ios-lock' />
                </Item>
              <View style={{justifyContent: "center" }}>
