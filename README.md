@@ -42,6 +42,26 @@ Install the packages with this command
 npm install
 ```
 
+## Setup env
+
+For Developent
+
+```
+ENVFILE=env/.env.development
+```
+
+For Staging
+
+```
+ENVFILE=env/.env.staging
+```
+
+For Production
+
+```
+ENVFILE=env/.env.production
+```
+
 ## Running the project
 
 To run in Android simulator
