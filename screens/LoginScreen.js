@@ -25,20 +25,12 @@ class LoginScreen extends Component {
       handleSubmit = async () => {
       let {username,password} = this.state;
       if(!username){
-        Toast.show({
-                  text: "Username is required!",
-                  buttonText: "Okay",
-                  type: "danger"
-            })
-          return false;
+            this.handleError("Username is required!")
+            return false;
       }
       if(!password){
-        Toast.show({
-                  text: "Password is required!",
-                  buttonText: "Okay",
-                  type: "danger"
-            })
-          return false;
+           this.handleError("Password is required!")
+            return false;
       }
       this.setState({ error: null, loading: true });
 
@@ -54,6 +46,15 @@ class LoginScreen extends Component {
       } catch (err) {
         this.setState({ error: 'Something went wrong', loading: false });
       }
+    }
+
+
+    handleError(error){
+      Toast.show({
+                text: error,
+                buttonText: "Okay",
+                type: "danger"
+          })
     }
 
 
