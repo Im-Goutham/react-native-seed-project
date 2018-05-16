@@ -10,6 +10,7 @@ import Header from '../components/Header';
 
 class AccountScreen extends Component {
 
+
     render() {
        return (
            <View style={{flex:1}}>
